@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="BSD 3-Clause "New" or "Revised" License"
+
+[[mods]]
+modId="simple_hearts"
+version="1.0.0"
+displayName="Simple Hearts"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+displayURL="https://mcreator.net"
+authors="Yrit"
+description='''
+A simple Minecraft mod that adds survival friendly ways of getting extra health.
+'''
+
+[[dependencies.simple_hearts]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+
