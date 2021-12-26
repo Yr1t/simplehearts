@@ -294,10 +294,10 @@
   "workspaceSettings": {
     "modid": "simple_hearts",
     "modName": "Simple Hearts",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A simple Minecraft mod that adds survival friendly ways of getting extra health.",
     "author": "Yrit",
-    "websiteURL": "https://mcreator.net",
+    "websiteURL": "https://www.youtube.com/watch?v\u003ddQw4w9WgXcQ",
     "license": "BSD 3-Clause New or Revised License",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
@@ -306,7 +306,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "Made with hearts and love.",
     "modElementsPackage": "yrit.simplehearts",
     "lockBaseModFiles": false
   },

@@ -4,10 +4,10 @@ license="BSD 3-Clause New or Revised License"
 
 [[mods]]
 modId="simple_hearts"
-version="1.0.0"
+version="1.0.1"
 displayName="Simple Hearts"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
+credits="Made with hearts and love."
+displayURL="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 authors="Yrit"
 description='''
 A simple Minecraft mod that adds survival friendly ways of getting extra health.

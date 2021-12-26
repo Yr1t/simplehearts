@@ -24,14 +24,14 @@ public class EternalheartRightClickedProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		{
 			double _setval = ((entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new SimpleHeartsModVariables.PlayerVariables())).Eternal_Hearts + 2);
+					.orElse(new SimpleHeartsModVariables.PlayerVariables())).Eternal_Hearts + 4);
 			entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Eternal_Hearts = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH)
-				.setBaseValue((22 + ((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue()));
+				.setBaseValue((24 + ((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue()));
 		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A75You feel your endurance rising to new heights..."), (false));
 		}
