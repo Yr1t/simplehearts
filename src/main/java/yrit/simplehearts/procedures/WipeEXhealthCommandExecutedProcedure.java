@@ -5,9 +5,11 @@ import yrit.simplehearts.SimpleHeartsMod;
 
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import java.util.Map;
+import java.util.Map;
 
 public class WipeEXhealthCommandExecutedProcedure {
 
@@ -18,6 +20,13 @@ public class WipeEXhealthCommandExecutedProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+		double Combined_EX_Hearts = 0;
+		Combined_EX_Hearts = ((entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new SimpleHeartsModVariables.PlayerVariables())).EX_Hearts
+				+ (entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new SimpleHeartsModVariables.PlayerVariables())).Eternal_Hearts);
+		((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH)
+				.setBaseValue((((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue() - Combined_EX_Hearts));
 		{
 			double _setval = 0;
 			entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -33,7 +42,7 @@ public class WipeEXhealthCommandExecutedProcedure {
 			});
 		}
 		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(("All extra hearts have been wiped from " + entity + ".")), (false));
+			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("All extra hearts have been wiped from your soul."), (false));
 		}
 	}
 }

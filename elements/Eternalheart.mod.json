@@ -25,8 +25,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "Adds 10 temporary hearts and 2 eternal hearts.",
-      "§5Max Uses: Infinite"
+      "§5Adds 10 temporary hearts and 2 eternal hearts."
     ],
     "hasGlow": true,
     "guiBoundTo": "<NONE>",

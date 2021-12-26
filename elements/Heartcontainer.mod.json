@@ -26,8 +26,7 @@
     "damageVsEntity": 0.0,
     "specialInfo": [
       "Adds one heart of additional health.",
-      "Persists after death.",
-      "§5Max Uses: 20"
+      "§5Persists after death."
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
