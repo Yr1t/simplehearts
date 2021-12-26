@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="BSD 3-Clause "New" or "Revised" License"
+license="BSD 3-Clause New or Revised License"
 
 [[mods]]
 modId="simple_hearts"

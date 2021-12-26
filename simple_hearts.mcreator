@@ -233,6 +233,33 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "poison_soup_recipe"
+    },
+    {
+      "name": "ZBPMRottenHeartLoot",
+      "type": "loottable",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "zbpm_rotten_heart_loot"
+    },
+    {
+      "name": "UGShackLootTable",
+      "type": "loottable",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ug_shack_loot_table"
+    },
+    {
+      "name": "UGshack",
+      "type": "structure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "u_gshack"
     }
   ],
   "variable_elements": [
@@ -270,7 +297,8 @@
     "version": "1.0.0",
     "description": "A simple Minecraft mod that adds survival friendly ways of getting extra health.",
     "author": "Yrit",
-    "license": "BSD 3-Clause \"New\" or \"Revised\" License",
+    "websiteURL": "https://mcreator.net",
+    "license": "BSD 3-Clause New or Revised License",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -278,6 +306,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "yrit.simplehearts",
     "lockBaseModFiles": false
   },
