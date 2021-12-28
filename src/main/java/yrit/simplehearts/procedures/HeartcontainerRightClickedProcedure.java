@@ -12,13 +12,18 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
 
 import java.util.Map;
+import java.util.Iterator;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -105,6 +110,32 @@ public class HeartcontainerRightClickedProcedure {
 					}
 					((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH)
 							.setBaseValue((((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue() + 2));
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity).setHealth((float) ((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue());
+					if (entity instanceof ServerPlayerEntity) {
+						Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+								.getAdvancement(new ResourceLocation("simple_hearts:firstdabble"));
+						AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemaningCriteria().iterator();
+							while (_iterator.hasNext()) {
+								String _criterion = (String) _iterator.next();
+								((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+							}
+						}
+					}
+					if (entity instanceof ServerPlayerEntity) {
+						Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+								.getAdvancement(new ResourceLocation("simple_hearts:cant_contain_me"));
+						AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemaningCriteria().iterator();
+							while (_iterator.hasNext()) {
+								String _criterion = (String) _iterator.next();
+								((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+							}
+						}
+					}
 					if (entity instanceof PlayerEntity) {
 						ItemStack _stktoremove = itemstack;
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,

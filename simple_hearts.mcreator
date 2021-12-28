@@ -260,6 +260,42 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "u_gshack"
+    },
+    {
+      "name": "Firstdabble",
+      "type": "achievement",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "firstdabble"
+    },
+    {
+      "name": "CantContainMe",
+      "type": "achievement",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cant_contain_me"
+    },
+    {
+      "name": "Eternalhealth",
+      "type": "achievement",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "eternalhealth"
+    },
+    {
+      "name": "SimpleheartsADV",
+      "type": "achievement",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "simplehearts_adv"
     }
   ],
   "variable_elements": [
@@ -279,12 +315,20 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "advancements.cant_contain_me.descr": "Use a Heart Container to level up your health.",
       "item.simple_hearts.eternalheart": "The Eternal Heart",
-      "itemGroup.tabhearttab": "Simple Hearts",
       "item.simple_hearts.rottenheart": "Rotten Heart",
+      "advancements.simplehearts_adv.descr": "Thank you for using this mod!",
+      "advancements.eternalhealth.descr": "Use the Eternal Heart.",
+      "item.simple_hearts.heartcontainer": "Heart Container",
+      "advancements.simplehearts_adv.title": "Simple Hearts",
+      "itemGroup.tabhearttab": "Simple Hearts",
+      "advancements.eternalhealth.title": "Eternal Health",
+      "advancements.firstdabble.descr": "Gain extra health through any heart type.",
+      "advancements.cant_contain_me.title": "You Can\u0027t Contain Me!",
       "item.simple_hearts.poisonsoup": "Rotten Soup",
       "item.simple_hearts.heartpiece": "Heart Piece",
-      "item.simple_hearts.heartcontainer": "Heart Container"
+      "advancements.firstdabble.title": "A Little Extra Won\u0027t Hurt"
     }
   },
   "foldersRoot": {

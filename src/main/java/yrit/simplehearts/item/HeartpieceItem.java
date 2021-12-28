@@ -65,6 +65,7 @@ public class HeartpieceItem extends SimpleHeartsModElements.ModElement {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Adds one heart of additional health."));
 			list.add(new StringTextComponent("\u00A7cExpires on death."));
+			list.add(new StringTextComponent("\u00A7aFull Heal"));
 		}
 
 		@Override

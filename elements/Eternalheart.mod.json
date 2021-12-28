@@ -25,7 +25,8 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§5Adds 10 temporary hearts and 2 eternal hearts."
+      "§5Adds 10 temporary hearts and 2 eternal hearts.",
+      "§aFull Heal"
     ],
     "hasGlow": true,
     "guiBoundTo": "<NONE>",

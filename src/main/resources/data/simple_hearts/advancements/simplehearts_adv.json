@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "simple_hearts:heartpiece"
+    },
+    "title": {
+      "translate": "advancements.simplehearts_adv.title"
+    },
+    "description": {
+      "translate": "advancements.simplehearts_adv.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "simplehearts_adv": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

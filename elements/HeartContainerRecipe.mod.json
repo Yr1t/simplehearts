@@ -10,13 +10,13 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Blocks.GOLD_BLOCK"
+        "value": "Items.GOLD_INGOT"
       },
       {
         "value": "Items.NETHERITE_INGOT"
       },
       {
-        "value": "Blocks.GOLD_BLOCK"
+        "value": "Items.GOLD_INGOT"
       },
       {
         "value": "CUSTOM:Heartpiece"
@@ -28,13 +28,13 @@
         "value": "CUSTOM:Heartpiece"
       },
       {
-        "value": "Blocks.GOLD_BLOCK"
+        "value": "Items.GOLD_INGOT"
       },
       {
         "value": "Items.NETHERITE_INGOT"
       },
       {
-        "value": "Blocks.GOLD_BLOCK"
+        "value": "Items.GOLD_INGOT"
       }
     ],
     "recipeReturnStack": {

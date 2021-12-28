@@ -72,6 +72,7 @@ public class EternalheartItem extends SimpleHeartsModElements.ModElement {
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("\u00A75Adds 10 temporary hearts and 2 eternal hearts."));
+			list.add(new StringTextComponent("\u00A7aFull Heal"));
 		}
 
 		@Override
