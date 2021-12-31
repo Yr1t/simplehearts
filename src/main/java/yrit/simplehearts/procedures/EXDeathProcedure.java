@@ -51,7 +51,7 @@ public class EXDeathProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		File config = new File("");
 		com.google.gson.JsonObject simpleheartjson = new com.google.gson.JsonObject();
-		config = (File) new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "simplehearts.json");
+		config = (File) new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "simplehearts_config.json");
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(config));
@@ -62,10 +62,10 @@ public class EXDeathProcedure {
 				}
 				bufferedReader.close();
 				simpleheartjson = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				if ((entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new SimpleHeartsModVariables.PlayerVariables())).EX_Hearts > simpleheartjson.get("MaxAmount").getAsDouble()) {
+				if ((entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(
+						new SimpleHeartsModVariables.PlayerVariables())).EX_Hearts > simpleheartjson.get("MaxHeartContainers").getAsDouble()) {
 					{
-						double _setval = simpleheartjson.get("MaxAmount").getAsDouble();
+						double _setval = simpleheartjson.get("MaxHeartContainers").getAsDouble();
 						entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.EX_Hearts = _setval;
 							capability.syncPlayerVariables(entity);

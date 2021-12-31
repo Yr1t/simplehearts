@@ -296,6 +296,32 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "simplehearts_adv"
+    },
+    {
+      "name": "ShdebugvariableCommand",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shdebugvariable_command",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shdebugvariable",
+      "type": "command",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shdebugvariable"
     }
   ],
   "variable_elements": [
@@ -310,6 +336,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "HeartContainerCount",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
     }
   ],
   "sound_elements": [],
@@ -338,10 +370,10 @@
   "workspaceSettings": {
     "modid": "simple_hearts",
     "modName": "Simple Hearts",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "A simple Minecraft mod that adds survival friendly ways of getting extra health.",
     "author": "Yrit",
-    "websiteURL": "https://www.youtube.com/watch?v\u003ddQw4w9WgXcQ",
+    "websiteURL": "https://github.com/Yr1t/simplehearts",
     "license": "BSD 3-Clause New or Revised License",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,

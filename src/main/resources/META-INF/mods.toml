@@ -4,10 +4,10 @@ license="BSD 3-Clause New or Revised License"
 
 [[mods]]
 modId="simple_hearts"
-version="1.0.1"
+version="1.1.0"
 displayName="Simple Hearts"
 credits="Made with hearts and love."
-displayURL="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+displayURL="https://github.com/Yr1t/simplehearts"
 authors="Yrit"
 description='''
 A simple Minecraft mod that adds survival friendly ways of getting extra health.

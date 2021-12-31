@@ -73,7 +73,7 @@ public class HeartcontainerRightClickedProcedure {
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		File config = new File("");
 		com.google.gson.JsonObject simpleheartjson = new com.google.gson.JsonObject();
-		config = (File) new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "simplehearts.json");
+		config = (File) new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "simplehearts_config.json");
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(config));
@@ -84,8 +84,8 @@ public class HeartcontainerRightClickedProcedure {
 				}
 				bufferedReader.close();
 				simpleheartjson = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				if ((entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new SimpleHeartsModVariables.PlayerVariables())).EX_Hearts >= simpleheartjson.get("MaxAmount").getAsDouble()) {
+				if ((entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(
+						new SimpleHeartsModVariables.PlayerVariables())).EX_Hearts >= simpleheartjson.get("MaxHeartContainers").getAsDouble()) {
 					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You have the maximum amount of Heart Containers!"),
 								(false));

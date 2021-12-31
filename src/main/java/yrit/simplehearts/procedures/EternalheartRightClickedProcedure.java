@@ -4,6 +4,8 @@ import yrit.simplehearts.item.EternalheartItem;
 import yrit.simplehearts.SimpleHeartsModVariables;
 import yrit.simplehearts.SimpleHeartsMod;
 
+import net.minecraftforge.fml.loading.FMLPaths;
+
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
@@ -19,6 +21,13 @@ import net.minecraft.advancements.Advancement;
 import java.util.Map;
 import java.util.Iterator;
 
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.File;
+import java.io.BufferedReader;
+
+import com.google.gson.Gson;
+
 public class EternalheartRightClickedProcedure {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -28,16 +37,34 @@ public class EternalheartRightClickedProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+		File config = new File("");
+		com.google.gson.JsonObject simpleheartjson = new com.google.gson.JsonObject();
+		config = (File) new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "simplehearts_config.json");
 		{
-			double _setval = ((entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new SimpleHeartsModVariables.PlayerVariables())).Eternal_Hearts + 4);
-			entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.Eternal_Hearts = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			try {
+				BufferedReader bufferedReader = new BufferedReader(new FileReader(config));
+				StringBuilder jsonstringbuilder = new StringBuilder();
+				String line;
+				while ((line = bufferedReader.readLine()) != null) {
+					jsonstringbuilder.append(line);
+				}
+				bufferedReader.close();
+				simpleheartjson = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				{
+					double _setval = ((entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new SimpleHeartsModVariables.PlayerVariables())).Eternal_Hearts + 4);
+					entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Eternal_Hearts = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).setBaseValue((4 + simpleheartjson.get("EternalHeartTemp").getAsDouble()
+						+ ((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue()));
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
-		((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH)
-				.setBaseValue((24 + ((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue()));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).setHealth((float) ((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue());
 		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {

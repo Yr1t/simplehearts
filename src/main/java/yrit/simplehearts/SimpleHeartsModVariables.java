@@ -73,6 +73,7 @@ public class SimpleHeartsModVariables {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putDouble("EX_Hearts", instance.EX_Hearts);
 			nbt.putDouble("Eternal_Hearts", instance.Eternal_Hearts);
+			nbt.putDouble("HeartContainerCount", instance.HeartContainerCount);
 			return nbt;
 		}
 
@@ -81,12 +82,14 @@ public class SimpleHeartsModVariables {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.EX_Hearts = nbt.getDouble("EX_Hearts");
 			instance.Eternal_Hearts = nbt.getDouble("Eternal_Hearts");
+			instance.HeartContainerCount = nbt.getDouble("HeartContainerCount");
 		}
 	}
 
 	public static class PlayerVariables {
 		public double EX_Hearts = 0;
 		public double Eternal_Hearts = 0;
+		public double HeartContainerCount = 0.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -123,6 +126,7 @@ public class SimpleHeartsModVariables {
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.EX_Hearts = original.EX_Hearts;
 		clone.Eternal_Hearts = original.Eternal_Hearts;
+		clone.HeartContainerCount = original.HeartContainerCount;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -151,6 +155,7 @@ public class SimpleHeartsModVariables {
 							.orElse(new PlayerVariables()));
 					variables.EX_Hearts = message.data.EX_Hearts;
 					variables.Eternal_Hearts = message.data.Eternal_Hearts;
+					variables.HeartContainerCount = message.data.HeartContainerCount;
 				}
 			});
 			context.setPacketHandled(true);
