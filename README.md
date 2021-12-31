@@ -10,7 +10,7 @@
 <p><span style="font-size: 14px;">Heart Piece:</span></p>
 <p><span style="font-size: 14px;"><img src="https://cdn.discordapp.com/attachments/739727161090637934/924577852349894656/Screenshot_2021-12-26_001415.png" alt="" width="262" height="137" /></span></p>
 <p><span style="font-size: 14px;">Heart Container:</span></p>
-<p><span style="font-size: 14px;"><img src="https://cdn.discordapp.com/attachments/739727161090637934/924577852601540648/Screenshot_2021-12-26_001456.png" alt="" width="249" height="132" /></span></p>
+<p><span style="font-size: 14px;"><img src="https://media.discordapp.net/attachments/739727161090637934/925542412686872686/Screenshot_2021-12-28_161431.png" alt="" width="249" height="132" /></span></p>
 </div>
 <p>&nbsp;</p>
 <p><span style="font-size: 14px;"><strong>Eternal Hearts and where to find them:</strong></span></p>
