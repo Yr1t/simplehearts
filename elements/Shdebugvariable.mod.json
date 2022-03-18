@@ -1,0 +1,11 @@
+{
+  "_fv": 25,
+  "_type": "command",
+  "definition": {
+    "commandName": "shdebugvariable",
+    "permissionLevel": "No requirement",
+    "onCommandExecuted": {
+      "name": "ShdebugvariableCommand"
+    }
+  }
+}

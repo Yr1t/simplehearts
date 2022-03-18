@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "simple_hearts:heartpiece"
+    },
+    "title": {
+      "translate": "advancements.firstdabble.title"
+    },
+    "description": {
+      "translate": "advancements.firstdabble.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "firstdabble": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "simple_hearts:simplehearts_adv"
+}

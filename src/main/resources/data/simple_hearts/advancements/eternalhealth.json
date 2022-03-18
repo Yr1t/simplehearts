@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "simple_hearts:eternalheart"
+    },
+    "title": {
+      "translate": "advancements.eternalhealth.title"
+    },
+    "description": {
+      "translate": "advancements.eternalhealth.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "eternalhealth": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "simple_hearts:cant_contain_me"
+}
