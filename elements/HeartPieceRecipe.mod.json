@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 34,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -10,31 +10,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:Rottenheart"
+        "value": ""
       },
       {
         "value": "CUSTOM:Rottenheart"
       },
       {
-        "value": "CUSTOM:Rottenheart"
+        "value": ""
       },
       {
         "value": "CUSTOM:Rottenheart"
       },
       {
-        "value": "Blocks.GLOWSTONE"
+        "value": "Items.GLOWSTONE_DUST"
       },
       {
         "value": "CUSTOM:Rottenheart"
       },
       {
-        "value": "CUSTOM:Rottenheart"
+        "value": ""
       },
       {
         "value": "CUSTOM:Rottenheart"
       },
       {
-        "value": "CUSTOM:Rottenheart"
+        "value": ""
       }
     ],
     "recipeReturnStack": {

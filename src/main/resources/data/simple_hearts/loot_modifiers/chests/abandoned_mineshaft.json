@@ -1,0 +1,10 @@
+{
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/abandoned_mineshaft"
+    }
+  ],
+  "table": "simple_hearts:chests_addition/abandoned_mineshaft",
+  "type": "simple_hearts:table_loot_mod"
+}

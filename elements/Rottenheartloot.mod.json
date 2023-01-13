@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 34,
   "_type": "loottable",
   "definition": {
     "type": "Entity",
@@ -30,7 +30,7 @@
             "item": {
               "value": "CUSTOM:Rottenheart"
             },
-            "weight": 7,
+            "weight": 17,
             "minCount": 0,
             "maxCount": 1,
             "minEnchantmentLevel": 0,

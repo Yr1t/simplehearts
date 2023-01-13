@@ -1,5 +1,4 @@
 {
-  "id_map": {},
   "mod_elements": [
     {
       "name": "Heartpiece",
@@ -7,7 +6,6 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "heartpiece"
     },
     {
@@ -16,7 +14,6 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "hearttab"
     },
     {
@@ -24,14 +21,29 @@
       "type": "procedure",
       "sortid": 2,
       "compiles": true,
-      "locked_code": false,
-      "ids": {},
+      "locked_code": true,
       "registry_name": "heartpiece_right_clicked",
       "metadata": {
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -42,7 +54,6 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "heartcontainer"
     },
     {
@@ -50,8 +61,7 @@
       "type": "procedure",
       "sortid": 4,
       "compiles": true,
-      "locked_code": false,
-      "ids": {},
+      "locked_code": true,
       "registry_name": "heartcontainer_right_clicked",
       "metadata": {
         "dependencies": [
@@ -87,8 +97,7 @@
       "type": "procedure",
       "sortid": 5,
       "compiles": true,
-      "locked_code": false,
-      "ids": {},
+      "locked_code": true,
       "registry_name": "ex_death",
       "metadata": {
         "dependencies": [
@@ -105,7 +114,6 @@
       "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "heartpiececonfig",
       "metadata": {
         "dependencies": []
@@ -116,8 +124,7 @@
       "type": "procedure",
       "sortid": 7,
       "compiles": true,
-      "locked_code": false,
-      "ids": {},
+      "locked_code": true,
       "registry_name": "wipe_e_xhealth_command_executed",
       "metadata": {
         "dependencies": [
@@ -134,7 +141,6 @@
       "sortid": 7,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "wipe_e_xhealth"
     },
     {
@@ -143,7 +149,6 @@
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rottenheart"
     },
     {
@@ -152,7 +157,6 @@
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "heart_piece_recipe"
     },
     {
@@ -161,7 +165,6 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "heart_container_recipe"
     },
     {
@@ -170,7 +173,6 @@
       "sortid": 11,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rottenheartloot"
     },
     {
@@ -179,7 +181,6 @@
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "eternalheart"
     },
     {
@@ -187,8 +188,7 @@
       "type": "procedure",
       "sortid": 13,
       "compiles": true,
-      "locked_code": false,
-      "ids": {},
+      "locked_code": true,
       "registry_name": "eternalheart_right_clicked",
       "metadata": {
         "dependencies": [
@@ -204,8 +204,7 @@
       "type": "procedure",
       "sortid": 14,
       "compiles": true,
-      "locked_code": false,
-      "ids": {},
+      "locked_code": true,
       "registry_name": "poisonsoup_food_eaten",
       "metadata": {
         "dependencies": [
@@ -217,21 +216,11 @@
       }
     },
     {
-      "name": "Poisonsoup",
-      "type": "food",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "poisonsoup"
-    },
-    {
       "name": "PoisonSoupRecipe",
       "type": "recipe",
       "sortid": 15,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "poison_soup_recipe"
     },
     {
@@ -240,7 +229,6 @@
       "sortid": 16,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "zbpm_rotten_heart_loot"
     },
     {
@@ -249,7 +237,6 @@
       "sortid": 17,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ug_shack_loot_table"
     },
     {
@@ -258,7 +245,6 @@
       "sortid": 18,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "u_gshack"
     },
     {
@@ -267,7 +253,6 @@
       "sortid": 19,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "firstdabble"
     },
     {
@@ -276,7 +261,6 @@
       "sortid": 20,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cant_contain_me"
     },
     {
@@ -285,7 +269,6 @@
       "sortid": 21,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "eternalhealth"
     },
     {
@@ -294,7 +277,6 @@
       "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "simplehearts_adv"
     },
     {
@@ -302,8 +284,7 @@
       "type": "procedure",
       "sortid": 24,
       "compiles": true,
-      "locked_code": false,
-      "ids": {},
+      "locked_code": true,
       "registry_name": "shdebugvariable_command",
       "metadata": {
         "dependencies": [
@@ -320,7 +301,6 @@
       "sortid": 24,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "shdebugvariable"
     },
     {
@@ -329,7 +309,6 @@
       "sortid": 25,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "simplehearts_adv_procedure",
       "metadata": {
         "dependencies": [
@@ -339,6 +318,30 @@
           }
         ]
       }
+    },
+    {
+      "name": "Poisonsoup",
+      "type": "item",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisonsoup"
+    },
+    {
+      "name": "Groundruinloottable",
+      "type": "loottable",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "groundruinloottable"
+    },
+    {
+      "name": "Groundruin",
+      "type": "structure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "groundruin"
     }
   ],
   "variable_elements": [
@@ -356,6 +359,12 @@
     },
     {
       "name": "HeartContainerCount",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "Temp_Hearts",
       "type": "number",
       "scope": "player_persistent",
       "value": "0.0"
@@ -387,7 +396,7 @@
   "workspaceSettings": {
     "modid": "simple_hearts",
     "modName": "Simple Hearts",
-    "version": "1.1.0",
+    "version": "1.1.3",
     "description": "A simple Minecraft mod that adds survival friendly ways of getting extra health.",
     "author": "Yrit",
     "websiteURL": "https://github.com/Yr1t/simplehearts",
@@ -398,10 +407,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.16.5",
+    "currentGenerator": "forge-1.18.2",
     "credits": "Made with hearts and love.",
     "modElementsPackage": "yrit.simplehearts",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100352418
+  "mcreatorVersion": 202200348217
 }

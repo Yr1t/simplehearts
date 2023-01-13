@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 34,
   "_type": "loottable",
   "definition": {
     "type": "Chest",
@@ -16,8 +16,36 @@
             "item": {
               "value": "CUSTOM:Eternalheart"
             },
-            "weight": 100,
+            "weight": 10,
+            "minCount": 0,
+            "maxCount": 1,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "CUSTOM:Heartpiece"
+            },
+            "weight": 80,
             "minCount": 1,
+            "maxCount": 3,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "CUSTOM:Heartcontainer"
+            },
+            "weight": 10,
+            "minCount": 0,
             "maxCount": 1,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,

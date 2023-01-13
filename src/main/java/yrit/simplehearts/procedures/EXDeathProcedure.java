@@ -1,21 +1,21 @@
 package yrit.simplehearts.procedures;
 
-import yrit.simplehearts.SimpleHeartsModVariables;
-import yrit.simplehearts.SimpleHeartsMod;
+import yrit.simplehearts.network.SimpleHeartsModVariables;
 
 import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.TextComponent;
 
-import java.util.Map;
-import java.util.HashMap;
+import javax.annotation.Nullable;
+
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -24,34 +24,23 @@ import java.io.BufferedReader;
 
 import com.google.gson.Gson;
 
+@Mod.EventBusSubscriber
 public class EXDeathProcedure {
-	@Mod.EventBusSubscriber
-	private static class GlobalTrigger {
-		@SubscribeEvent
-		public static void onPlayerRespawned(PlayerEvent.PlayerRespawnEvent event) {
-			Entity entity = event.getPlayer();
-			Map<String, Object> dependencies = new HashMap<>();
-			dependencies.put("x", entity.getPosX());
-			dependencies.put("y", entity.getPosY());
-			dependencies.put("z", entity.getPosZ());
-			dependencies.put("world", entity.world);
-			dependencies.put("entity", entity);
-			dependencies.put("endconquered", event.isEndConquered());
-			dependencies.put("event", event);
-			executeProcedure(dependencies);
-		}
+	@SubscribeEvent
+	public static void onPlayerRespawned(PlayerEvent.PlayerRespawnEvent event) {
+		execute(event, event.getPlayer());
 	}
 
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				SimpleHeartsMod.LOGGER.warn("Failed to load dependency entity for procedure EXDeath!");
+	public static void execute(Entity entity) {
+		execute(null, entity);
+	}
+
+	private static void execute(@Nullable Event event, Entity entity) {
+		if (entity == null)
 			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
 		File config = new File("");
 		com.google.gson.JsonObject simpleheartjson = new com.google.gson.JsonObject();
-		config = (File) new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "simplehearts_config.json");
+		config = new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "simplehearts_config.json");
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(config));
@@ -71,12 +60,11 @@ public class EXDeathProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(
-								"Some Heart Containers may have been removed due to the Heart Container limit being changed."), (false));
-					}
+					if (entity instanceof Player _player && !_player.level.isClientSide())
+						_player.displayClientMessage(
+								new TextComponent("Some Heart Containers may have been removed due to the Heart Container limit being changed."),
+								(false));
 				}
-
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -94,10 +82,16 @@ public class EXDeathProcedure {
 				if (simpleheartjson.get("StartingHealthToggle").getAsBoolean() == true) {
 					((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).setBaseValue(simpleheartjson.get("StartingHealth").getAsDouble());
 				}
-
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+		}
+		{
+			double _setval = 0;
+			entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Temp_Hearts = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
 		((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH)
 				.setBaseValue(((entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
@@ -107,7 +101,7 @@ public class EXDeathProcedure {
 				.setBaseValue(((entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SimpleHeartsModVariables.PlayerVariables())).Eternal_Hearts
 						+ ((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue()));
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).setHealth((float) ((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue());
+		if (entity instanceof LivingEntity _entity)
+			_entity.setHealth((float) ((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue());
 	}
 }

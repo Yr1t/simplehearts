@@ -1,36 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
+    " 1 ",
     "345",
-    "678"
+    " 7 "
   ],
   "key": {
-    "0": {
-      "item": "simple_hearts:rottenheart"
-    },
     "1": {
-      "item": "simple_hearts:rottenheart"
-    },
-    "2": {
       "item": "simple_hearts:rottenheart"
     },
     "3": {
       "item": "simple_hearts:rottenheart"
     },
     "4": {
-      "item": "minecraft:glowstone"
+      "item": "minecraft:glowstone_dust"
     },
     "5": {
       "item": "simple_hearts:rottenheart"
     },
-    "6": {
-      "item": "simple_hearts:rottenheart"
-    },
     "7": {
-      "item": "simple_hearts:rottenheart"
-    },
-    "8": {
       "item": "simple_hearts:rottenheart"
     }
   },

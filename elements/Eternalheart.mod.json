@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 34,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -25,8 +25,8 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§5Gives you some temporary hearts and 2 eternal hearts.",
-      "§aFull Heal"
+      "Â§5Gives you some temporary hearts and 2 eternal hearts.",
+      "Â§aFull Heal"
     ],
     "hasGlow": true,
     "guiBoundTo": "<NONE>",
@@ -35,6 +35,11 @@
     "onRightClickedInAir": {
       "name": "EternalheartRightClicked"
     },
-    "hasDispenseBehavior": false
+    "isFood": false,
+    "nutritionalValue": 0,
+    "saturation": 0.30000001192092896,
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "eat"
   }
 }

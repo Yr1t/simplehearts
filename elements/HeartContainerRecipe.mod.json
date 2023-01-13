@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 34,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -13,7 +13,7 @@
         "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "Items.NETHERITE_INGOT"
+        "value": "Blocks.GOLD_BLOCK"
       },
       {
         "value": "Items.GOLD_INGOT"
@@ -31,7 +31,7 @@
         "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "Items.NETHERITE_INGOT"
+        "value": "Blocks.GOLD_BLOCK"
       },
       {
         "value": "Items.GOLD_INGOT"

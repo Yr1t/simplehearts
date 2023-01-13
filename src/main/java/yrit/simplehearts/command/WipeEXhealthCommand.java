@@ -3,54 +3,65 @@ package yrit.simplehearts.command;
 
 import yrit.simplehearts.procedures.WipeEXhealthCommandExecutedProcedure;
 
+import org.checkerframework.checker.units.qual.s;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.common.util.FakePlayerFactory;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.entity.Entity;
-import net.minecraft.command.Commands;
-import net.minecraft.command.CommandSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.Direction;
+import net.minecraft.commands.Commands;
 
-import java.util.stream.Stream;
-import java.util.Map;
 import java.util.HashMap;
-import java.util.Arrays;
-import java.util.AbstractMap;
 
-import com.mojang.brigadier.context.CommandContext;
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.arguments.StringArgumentType;
 
 @Mod.EventBusSubscriber
 public class WipeEXhealthCommand {
 	@SubscribeEvent
-	public static void registerCommands(RegisterCommandsEvent event) {
-		event.getDispatcher()
-				.register(LiteralArgumentBuilder.<CommandSource>literal("wipeEXhearts").requires(s -> s.hasPermissionLevel(2))
-						.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(WipeEXhealthCommand::execute))
-						.executes(WipeEXhealthCommand::execute));
-	}
+	public static void registerCommand(RegisterCommandsEvent event) {
+		event.getDispatcher().register(Commands.literal("wipeEXhearts").requires(s -> s.hasPermission(2))
+				.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+					HashMap<String, String> cmdparams = new HashMap<>();
+					int index = -1;
+					for (String param : arguments.getInput().split("\\s+")) {
+						if (index >= 0)
+							cmdparams.put(Integer.toString(index), param);
+						index++;
+					}
 
-	private static int execute(CommandContext<CommandSource> ctx) {
-		ServerWorld world = ctx.getSource().getWorld();
-		double x = ctx.getSource().getPos().getX();
-		double y = ctx.getSource().getPos().getY();
-		double z = ctx.getSource().getPos().getZ();
-		Entity entity = ctx.getSource().getEntity();
-		if (entity == null)
-			entity = FakePlayerFactory.getMinecraft(world);
-		HashMap<String, String> cmdparams = new HashMap<>();
-		int[] index = {-1};
-		Arrays.stream(ctx.getInput().split("\\s+")).forEach(param -> {
-			if (index[0] >= 0)
-				cmdparams.put(Integer.toString(index[0]), param);
-			index[0]++;
-		});
+					WipeEXhealthCommandExecutedProcedure.execute(entity);
+					return 0;
+				})).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+					HashMap<String, String> cmdparams = new HashMap<>();
+					int index = -1;
+					for (String param : arguments.getInput().split("\\s+")) {
+						if (index >= 0)
+							cmdparams.put(Integer.toString(index), param);
+						index++;
+					}
 
-		WipeEXhealthCommandExecutedProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		return 0;
+					WipeEXhealthCommandExecutedProcedure.execute(entity);
+					return 0;
+				}));
 	}
 }

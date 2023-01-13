@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 34,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -26,8 +26,8 @@
     "damageVsEntity": 0.0,
     "specialInfo": [
       "Adds one heart of additional health.",
-      "§cExpires on death.",
-      "§aFull Heal"
+      "Â§cExpires on death.",
+      "Â§aFull Heal"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
@@ -36,6 +36,11 @@
     "onRightClickedInAir": {
       "name": "HeartpieceRightClicked"
     },
-    "hasDispenseBehavior": false
+    "isFood": false,
+    "nutritionalValue": 0,
+    "saturation": 0.30000001192092896,
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "eat"
   }
 }

@@ -1,34 +1,30 @@
 package yrit.simplehearts.procedures;
 
-import yrit.simplehearts.SimpleHeartsModVariables;
-import yrit.simplehearts.SimpleHeartsMod;
+import yrit.simplehearts.network.SimpleHeartsModVariables;
 
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.TextComponent;
 
-import java.util.Map;
 
 public class ShdebugvariableCommandProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				SimpleHeartsMod.LOGGER.warn("Failed to load dependency entity for procedure ShdebugvariableCommand!");
+	public static void execute(Entity entity) {
+		if (entity == null)
 			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
-		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-			((PlayerEntity) entity).sendStatusMessage(
-					new StringTextComponent(("EX_Hearts: " + (entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+		if (entity instanceof Player _player && !_player.level.isClientSide())
+			_player.displayClientMessage(
+					new TextComponent(("EX_Hearts: " + (entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SimpleHeartsModVariables.PlayerVariables())).EX_Hearts)),
 					(false));
-		}
-		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-			((PlayerEntity) entity).sendStatusMessage(
-					new StringTextComponent(("Eternal_Hearts" + (entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+		if (entity instanceof Player _player && !_player.level.isClientSide())
+			_player.displayClientMessage(
+					new TextComponent(("Eternal_Hearts: " + (entity.getCapability(SimpleHeartsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SimpleHeartsModVariables.PlayerVariables())).Eternal_Hearts)),
 					(false));
-		}
+		if (entity instanceof Player _player && !_player.level.isClientSide())
+			_player.displayClientMessage(
+					new TextComponent(("Max Health" + ((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue())), (false));
 	}
 }
