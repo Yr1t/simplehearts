@@ -1,12 +1,25 @@
 {
+<<<<<<< HEAD
   "_fv": 34,
   "_type": "item",
+=======
+  "_fv": 25,
+  "_type": "food",
+>>>>>>> branch '1.18.2' of https://github.com/Yr1t/simplehearts.git
   "definition": {
     "renderType": 0,
     "texture": "poisonsoup",
     "customModelName": "Normal",
     "name": "Rotten Soup",
     "rarity": "COMMON",
+<<<<<<< HEAD
+=======
+    "specialInfo": [
+      "Smells like soupy rotten organs.",
+      "§4Removes 1 Heart Container.",
+      "§4Deals a half heart of damage."
+    ],
+>>>>>>> branch '1.18.2' of https://github.com/Yr1t/simplehearts.git
     "creativeTab": {
       "value": "CUSTOM:Hearttab"
     },

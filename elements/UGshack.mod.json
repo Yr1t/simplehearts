@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "_fv": 34,
+=======
+  "_fv": 25,
+>>>>>>> branch '1.18.2' of https://github.com/Yr1t/simplehearts.git
   "_type": "structure",
   "definition": {
     "structure": "ug_shack",

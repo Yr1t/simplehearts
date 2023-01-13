@@ -10,7 +10,11 @@
       "item": "minecraft:gold_ingot"
     },
     "1": {
+<<<<<<< HEAD
       "item": "minecraft:gold_block"
+=======
+      "item": "minecraft:gold_ingot"
+>>>>>>> branch '1.18.2' of https://github.com/Yr1t/simplehearts.git
     },
     "2": {
       "item": "minecraft:gold_ingot"
@@ -28,7 +32,11 @@
       "item": "minecraft:gold_ingot"
     },
     "7": {
+<<<<<<< HEAD
       "item": "minecraft:gold_block"
+=======
+      "item": "minecraft:gold_ingot"
+>>>>>>> branch '1.18.2' of https://github.com/Yr1t/simplehearts.git
     },
     "8": {
       "item": "minecraft:gold_ingot"
