@@ -375,8 +375,8 @@
     "en_us": {
       "advancements.cant_contain_me.descr": "Use a Heart Container to level up your health.",
       "item.simple_hearts.eternalheart": "The Eternal Heart",
-      "item.simple_hearts.rottenheart": "Rotten Heart",
       "advancements.simplehearts_adv.descr": "Thank you for using this mod!",
+      "item.simple_hearts.rottenheart": "Rotten Heart",
       "advancements.eternalhealth.descr": "Use the Eternal Heart.",
       "item.simple_hearts.heartcontainer": "Heart Container",
       "advancements.simplehearts_adv.title": "Simple Hearts",
@@ -396,7 +396,7 @@
   "workspaceSettings": {
     "modid": "simple_hearts",
     "modName": "Simple Hearts",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "description": "A simple Minecraft mod that adds survival friendly ways of getting extra health.",
     "author": "Yrit",
     "websiteURL": "https://github.com/Yr1t/simplehearts",
