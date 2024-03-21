@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "simple_hearts mod resources",
-    "pack_format": 9
+    "pack_format": 15,
+    "description": "A simple, survival friendly extra health mod."
   }
 }

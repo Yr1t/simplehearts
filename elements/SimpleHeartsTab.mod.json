@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "tab",
+  "definition": {
+    "name": "Simple Hearts",
+    "icon": {
+      "value": "CUSTOM:HeartPiece"
+    },
+    "showSearch": false
+  }
+}

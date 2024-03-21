@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "features": "simple_hearts:abandoned_shack",
+  "step": "underground_structures"
+}

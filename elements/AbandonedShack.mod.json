@@ -1,0 +1,12 @@
+{
+  "_fv": 57,
+  "_type": "feature",
+  "definition": {
+    "generationStep": "UNDERGROUND_STRUCTURES",
+    "restrictionBiomes": [],
+    "generateCondition": {
+      "name": "AbandonedShackCheckConfig"
+    },
+    "featurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"feature_container\" deletable=\"false\" x=\"86\" y=\"60\"><value name=\"feature\"><block type=\"feature_custom_structure\"><field name=\"structure\">abandonedshack</field><field name=\"x\">0</field><field name=\"y\">0</field><field name=\"z\">0</field><field name=\"random_rotation\">TRUE</field><field name=\"random_mirror\">TRUE</field><value name=\"ignored_blocks\"><block type=\"block_holderset_list\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"1\"></mutation><field name=\"block0\">Blocks.STRUCTURE_BLOCK</field></block></value></block></value><next><block type=\"placement_rarity\"><field name=\"rarity\">30</field><next><block type=\"placement_in_square\"><next><block type=\"placement_height_uniform\"><value name=\"min\"><block type=\"vertical_anchor_absolute\"><field name=\"value\">-58</field></block></value><value name=\"max\"><block type=\"vertical_anchor_absolute\"><field name=\"value\">0</field></block></value><next><block type=\"placement_block_predicate_filter\"><value name=\"condition\"><block type=\"block_predicate_is_air_or_water\"></block></value></block></next></block></next></block></next></block></next></block></xml>"
+  }
+}

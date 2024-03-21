@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "clearsimplehearts",
+    "type": "STANDARD",
+    "permissionLevel": "4",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"104\" y=\"53\"><next><block type=\"call_procedure\"><field name=\"procedure\">ClearHeartsProcedure</field></block></next></block></xml>"
+  }
+}

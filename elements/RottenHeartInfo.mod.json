@@ -1,0 +1,18 @@
+{
+  "_fv": 57,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:RottenHeart"
+      },
+      {
+        "value": "CUSTOM:RottenHeartPiece"
+      }
+    ],
+    "information": [
+      "These very foul smelling items can be obtained from",
+      "zombies as a rare drop."
+    ]
+  }
+}

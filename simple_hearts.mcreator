@@ -1,69 +1,41 @@
 {
   "mod_elements": [
     {
-      "name": "Heartpiece",
+      "name": "HeartPiece",
       "type": "item",
-      "sortid": 1,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "heartpiece"
-    },
-    {
-      "name": "Hearttab",
-      "type": "tab",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hearttab"
-    },
-    {
-      "name": "HeartpieceRightClicked",
-      "type": "procedure",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "heartpiece_right_clicked",
+      "registry_name": "heart_piece",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
+        "files": [
+          "src/main/java/net/yrit/simplehearts/item/HeartPieceItem.java",
+          "src/main/resources/assets/simple_hearts/models/item/heart_piece.json"
         ]
       }
     },
     {
-      "name": "Heartcontainer",
-      "type": "item",
+      "name": "SimpleHeartsTab",
+      "type": "tab",
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "heartcontainer"
+      "registry_name": "simple_hearts_tab",
+      "metadata": {
+        "files": []
+      }
     },
     {
-      "name": "HeartcontainerRightClicked",
+      "name": "HeartPieceRightclicked",
       "type": "procedure",
-      "sortid": 4,
+      "sortid": 2,
       "compiles": true,
-      "locked_code": true,
-      "registry_name": "heartcontainer_right_clicked",
+      "locked_code": false,
+      "registry_name": "heart_piece_rightclicked",
       "metadata": {
+        "files": [
+          "src/main/java/net/yrit/simplehearts/procedures/HeartPieceRightclickedProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -93,40 +65,44 @@
       }
     },
     {
-      "name": "EXDeath",
+      "name": "ConfigInit",
       "type": "procedure",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "ex_death",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Heartpiececonfig",
-      "type": "procedure",
-      "sortid": 6,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "heartpiececonfig",
+      "registry_name": "config_init",
       "metadata": {
+        "files": [
+          "src/main/java/net/yrit/simplehearts/procedures/ConfigInitProcedure.java"
+        ],
         "dependencies": []
       }
     },
     {
-      "name": "WipeEXhealthCommandExecuted",
-      "type": "procedure",
-      "sortid": 7,
+      "name": "HeartContainer",
+      "type": "item",
+      "sortid": 5,
       "compiles": true,
-      "locked_code": true,
-      "registry_name": "wipe_e_xhealth_command_executed",
+      "locked_code": false,
+      "registry_name": "heart_container",
       "metadata": {
+        "files": [
+          "src/main/resources/assets/simple_hearts/models/item/heart_container.json",
+          "src/main/java/net/yrit/simplehearts/item/HeartContainerItem.java"
+        ]
+      }
+    },
+    {
+      "name": "SetHealthOnSpawn",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_health_on_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/yrit/simplehearts/procedures/SetHealthOnSpawnProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -136,28 +112,70 @@
       }
     },
     {
-      "name": "WipeEXhealth",
-      "type": "command",
+      "name": "HeartContainerRightclicked",
+      "type": "procedure",
       "sortid": 7,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "wipe_e_xhealth"
+      "registry_name": "heart_container_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/yrit/simplehearts/procedures/HeartContainerRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     },
     {
-      "name": "Rottenheart",
+      "name": "RottenHeart",
       "type": "item",
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "rottenheart"
+      "registry_name": "rotten_heart",
+      "metadata": {
+        "files": [
+          "src/main/java/net/yrit/simplehearts/item/RottenHeartItem.java",
+          "src/main/resources/assets/simple_hearts/models/item/rotten_heart.json"
+        ]
+      }
     },
     {
-      "name": "HeartPieceRecipe",
+      "name": "HeartPieceSmithing",
       "type": "recipe",
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "heart_piece_recipe"
+      "registry_name": "heart_piece_smithing",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/simple_hearts/recipes/heart_piece_smithing.json"
+        ]
+      }
     },
     {
       "name": "HeartContainerRecipe",
@@ -165,228 +183,304 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "heart_container_recipe"
+      "registry_name": "heart_container_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/simple_hearts/recipes/heart_container.json"
+        ]
+      }
     },
     {
-      "name": "Rottenheartloot",
-      "type": "loottable",
+      "name": "EternalHeart",
+      "type": "item",
       "sortid": 11,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "rottenheartloot"
+      "registry_name": "eternal_heart",
+      "metadata": {
+        "files": [
+          "src/main/java/net/yrit/simplehearts/item/EternalHeartItem.java",
+          "src/main/resources/assets/simple_hearts/models/item/eternal_heart.json"
+        ]
+      }
     },
     {
-      "name": "Eternalheart",
-      "type": "item",
+      "name": "EternalHeartInfo",
+      "type": "jeiinformation",
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "eternalheart"
+      "registry_name": "eternal_heart_info",
+      "metadata": {
+        "files": []
+      }
     },
     {
-      "name": "EternalheartRightClicked",
-      "type": "procedure",
+      "name": "RottenHeartPiece",
+      "type": "item",
       "sortid": 13,
       "compiles": true,
-      "locked_code": true,
-      "registry_name": "eternalheart_right_clicked",
+      "locked_code": false,
+      "registry_name": "rotten_heart_piece",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+        "files": [
+          "src/main/java/net/yrit/simplehearts/item/RottenHeartPieceItem.java",
+          "src/main/resources/assets/simple_hearts/models/item/rotten_heart_piece.json"
         ]
       }
     },
     {
-      "name": "PoisonsoupFoodEaten",
-      "type": "procedure",
+      "name": "RottenHeartPieceToRottenHeart",
+      "type": "recipe",
       "sortid": 14,
       "compiles": true,
-      "locked_code": true,
-      "registry_name": "poisonsoup_food_eaten",
+      "locked_code": false,
+      "registry_name": "rotten_heart_piece_to_rotten_heart",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+        "files": [
+          "src/main/resources/data/simple_hearts/recipes/rotten_heart_piece_to_rotten_heart.json"
         ]
       }
     },
     {
-      "name": "PoisonSoupRecipe",
-      "type": "recipe",
+      "name": "EternalHeartRightclicked",
+      "type": "procedure",
       "sortid": 15,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "poison_soup_recipe"
+      "registry_name": "eternal_heart_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/yrit/simplehearts/procedures/EternalHeartRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     },
     {
-      "name": "ZBPMRottenHeartLoot",
-      "type": "loottable",
+      "name": "ClearHeartsProcedure",
+      "type": "procedure",
       "sortid": 16,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "zbpm_rotten_heart_loot"
+      "registry_name": "clear_hearts_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/yrit/simplehearts/procedures/ClearHeartsProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     },
     {
-      "name": "UGShackLootTable",
-      "type": "loottable",
+      "name": "ClearHearts",
+      "type": "command",
       "sortid": 17,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ug_shack_loot_table"
+      "registry_name": "clear_hearts",
+      "metadata": {
+        "files": [
+          "src/main/java/net/yrit/simplehearts/command/ClearHeartsCommand.java"
+        ]
+      }
     },
     {
-      "name": "UGshack",
-      "type": "structure",
+      "name": "ZombieSimpleHeartsLoot",
+      "type": "loottable",
       "sortid": 18,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "u_gshack"
+      "registry_name": "zombie_simple_hearts_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/loot_tables/entities/zombie.json"
+        ]
+      }
     },
     {
-      "name": "Firstdabble",
-      "type": "achievement",
+      "name": "AbandonedShackLoot",
+      "type": "loottable",
       "sortid": 19,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "firstdabble"
+      "registry_name": "abandoned_shack_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/simple_hearts/loot_tables/blocks/abandoned_shack_loot.json"
+        ]
+      }
     },
     {
-      "name": "CantContainMe",
-      "type": "achievement",
+      "name": "AbandonedShack",
+      "type": "feature",
       "sortid": 20,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "cant_contain_me"
+      "registry_name": "abandoned_shack",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/simple_hearts/worldgen/configured_feature/abandoned_shack.json",
+          "src/main/java/net/yrit/simplehearts/world/features/AbandonedShackFeature.java",
+          "src/main/resources/data/simple_hearts/forge/biome_modifier/abandoned_shack_biome_modifier.json",
+          "src/main/resources/data/simple_hearts/worldgen/placed_feature/abandoned_shack.json"
+        ],
+        "has_nbt_structure": true
+      }
     },
     {
-      "name": "Eternalhealth",
-      "type": "achievement",
+      "name": "AbandonedShackCheckConfig",
+      "type": "procedure",
       "sortid": 21,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "eternalhealth"
+      "registry_name": "abandoned_shack_check_config",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/yrit/simplehearts/procedures/AbandonedShackCheckConfigProcedure.java"
+        ],
+        "dependencies": []
+      }
     },
     {
-      "name": "SimpleheartsADV",
-      "type": "achievement",
+      "name": "RottenSoupHeartDrain",
+      "type": "procedure",
       "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "simplehearts_adv"
-    },
-    {
-      "name": "ShdebugvariableCommand",
-      "type": "procedure",
-      "sortid": 24,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "shdebugvariable_command",
+      "registry_name": "rotten_soup_heart_drain",
       "metadata": {
+        "files": [
+          "src/main/java/net/yrit/simplehearts/procedures/RottenSoupHeartDrainProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
     },
     {
-      "name": "Shdebugvariable",
-      "type": "command",
+      "name": "RottenSoup",
+      "type": "item",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rotten_soup",
+      "metadata": {
+        "files": [
+          "src/main/java/net/yrit/simplehearts/item/RottenSoupItem.java",
+          "src/main/resources/assets/simple_hearts/models/item/rotten_soup.json"
+        ]
+      }
+    },
+    {
+      "name": "RottenHeartInfo",
+      "type": "jeiinformation",
       "sortid": 24,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "shdebugvariable"
+      "registry_name": "rotten_heart_info",
+      "metadata": {
+        "files": []
+      }
     },
     {
-      "name": "SimpleheartsADVProcedure",
-      "type": "procedure",
+      "name": "RottenSoupCrafting",
+      "type": "recipe",
       "sortid": 25,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "simplehearts_adv_procedure",
+      "registry_name": "rotten_soup_crafting",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+        "files": [
+          "src/main/resources/data/simple_hearts/recipes/rotten_soup_crafting.json"
         ]
       }
-    },
-    {
-      "name": "Poisonsoup",
-      "type": "item",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "poisonsoup"
-    },
-    {
-      "name": "Groundruinloottable",
-      "type": "loottable",
-      "sortid": 27,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "groundruinloottable"
-    },
-    {
-      "name": "Groundruin",
-      "type": "structure",
-      "sortid": 28,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "groundruin"
     }
   ],
   "variable_elements": [
     {
-      "name": "EX_Hearts",
+      "name": "HeartPieceCount",
       "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Eternal_Hearts",
-      "type": "number",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "0"
     },
     {
       "name": "HeartContainerCount",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0.0"
+      "value": "0"
     },
     {
-      "name": "Temp_Hearts",
+      "name": "EternalHeartCount",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0.0"
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.cant_contain_me.descr": "Use a Heart Container to level up your health.",
-      "item.simple_hearts.eternalheart": "The Eternal Heart",
-      "advancements.simplehearts_adv.descr": "Thank you for using this mod!",
-      "item.simple_hearts.rottenheart": "Rotten Heart",
-      "advancements.eternalhealth.descr": "Use the Eternal Heart.",
-      "item.simple_hearts.heartcontainer": "Heart Container",
-      "advancements.simplehearts_adv.title": "Simple Hearts",
-      "itemGroup.tabhearttab": "Simple Hearts",
-      "advancements.eternalhealth.title": "Eternal Health",
-      "advancements.firstdabble.descr": "Gain extra health through any heart type.",
-      "advancements.cant_contain_me.title": "You Can\u0027t Contain Me!",
-      "item.simple_hearts.poisonsoup": "Rotten Soup",
-      "item.simple_hearts.heartpiece": "Heart Piece",
-      "advancements.firstdabble.title": "A Little Extra Won\u0027t Hurt"
+      "item.simple_hearts.heart_container": "Heart Container",
+      "item_group.simple_hearts.simple_hearts_tab": "Simple Hearts",
+      "jei.simple_hearts.eternal_heart_info": "This is a rare find in underground abandoned shacks.",
+      "item.simple_hearts.rotten_heart_piece": "Rotten Heart Piece",
+      "jei.simple_hearts.rotten_heart_info": "These very foul smelling items can be obtained from\nzombies as a rare drop.",
+      "item.simple_hearts.eternal_heart": "Eternal Heart",
+      "item.simple_hearts.rotten_heart": "Rotten Heart",
+      "item.simple_hearts.heart_piece": "Heart Piece",
+      "item.simple_hearts.rotten_soup": "Rotten Soup"
     }
   },
   "foldersRoot": {
@@ -396,21 +490,24 @@
   "workspaceSettings": {
     "modid": "simple_hearts",
     "modName": "Simple Hearts",
-    "version": "1.1.4",
-    "description": "A simple Minecraft mod that adds survival friendly ways of getting extra health.",
-    "author": "Yrit",
+    "version": "2.0",
+    "description": "A simple, survival friendly extra health mod.",
+    "author": "yrit",
     "websiteURL": "https://github.com/Yr1t/simplehearts",
-    "license": "BSD 3-Clause New or Revised License",
+    "license": "Ace3 Style BSD",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "637761047487205857",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.18.2",
-    "credits": "Made with hearts and love.",
-    "modElementsPackage": "yrit.simplehearts",
+    "mcreatorDependencies": [
+      "jei"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created with love \u003c3",
+    "modElementsPackage": "net.yrit.simplehearts",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200348217
+  "mcreatorVersion": 202300452316
 }

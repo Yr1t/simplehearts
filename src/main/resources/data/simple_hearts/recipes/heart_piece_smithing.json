@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "b": {
+      "item": "simple_hearts:rotten_heart"
+    }
+  },
+  "result": {
+    "item": "simple_hearts:heart_piece",
+    "count": 1
+  }
+}

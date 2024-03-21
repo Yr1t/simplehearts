@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "simple_hearts:rotten_heart_piece"
+    },
+    {
+      "item": "simple_hearts:rotten_heart_piece"
+    },
+    {
+      "item": "simple_hearts:rotten_heart_piece"
+    },
+    {
+      "item": "simple_hearts:rotten_heart_piece"
+    }
+  ],
+  "result": {
+    "item": "simple_hearts:rotten_heart",
+    "count": 1
+  }
+}

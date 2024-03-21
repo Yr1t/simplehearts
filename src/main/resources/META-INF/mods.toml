@@ -1,25 +1,30 @@
 modLoader="javafml"
-loaderVersion="[40,)"
-license="BSD 3-Clause New or Revised License"
+loaderVersion="[47,)"
+license="Ace3 Style BSD"
 
 [[mods]]
 modId="simple_hearts"
-version="1.1.4"
+version="2.0"
 displayName="Simple Hearts"
-credits="Made with hearts and love."
 displayURL="https://github.com/Yr1t/simplehearts"
-authors="Yrit"
-description='''
-A simple Minecraft mod that adds survival friendly ways of getting extra health.
-'''
+logoFile="logo.png"
+credits="Created with love <3"
+authors="yrit"
+description="A simple, survival friendly extra health mod."
 
 [[dependencies.simple_hearts]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.2]"
+    versionRange="[1.20.1]"
     ordering="NONE"
     side="BOTH"
 
 
 
+[[dependencies.simple_hearts]]
+    modId="jei"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

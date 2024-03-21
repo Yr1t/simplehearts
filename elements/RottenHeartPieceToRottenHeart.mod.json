@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RottenHeartPiece"
+      },
+      {
+        "value": "CUSTOM:RottenHeartPiece"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RottenHeartPiece"
+      },
+      {
+        "value": "CUSTOM:RottenHeartPiece"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:RottenHeart"
+    },
+    "name": "rotten_heart_piece_to_rotten_heart",
+    "namespace": "mod"
+  }
+}

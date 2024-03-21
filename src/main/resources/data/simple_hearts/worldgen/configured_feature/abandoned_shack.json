@@ -1,0 +1,9 @@
+{
+  "type": "simple_hearts:abandoned_shack",
+  "config": {
+    "structure": "simple_hearts:abandonedshack",
+    "random_rotation": true,
+    "random_mirror": true,
+    "ignored_blocks": "minecraft:structure_block"
+  }
+}

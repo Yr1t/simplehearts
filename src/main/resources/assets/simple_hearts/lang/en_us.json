@@ -1,16 +1,11 @@
 {
-  "advancements.cant_contain_me.descr": "Use a Heart Container to level up your health.",
-  "item.simple_hearts.eternalheart": "The Eternal Heart",
-  "advancements.simplehearts_adv.descr": "Thank you for using this mod!",
-  "item.simple_hearts.rottenheart": "Rotten Heart",
-  "advancements.eternalhealth.descr": "Use the Eternal Heart.",
-  "item.simple_hearts.heartcontainer": "Heart Container",
-  "advancements.simplehearts_adv.title": "Simple Hearts",
-  "itemGroup.tabhearttab": "Simple Hearts",
-  "advancements.eternalhealth.title": "Eternal Health",
-  "advancements.firstdabble.descr": "Gain extra health through any heart type.",
-  "advancements.cant_contain_me.title": "You Can\u0027t Contain Me!",
-  "item.simple_hearts.poisonsoup": "Rotten Soup",
-  "item.simple_hearts.heartpiece": "Heart Piece",
-  "advancements.firstdabble.title": "A Little Extra Won\u0027t Hurt"
+  "item.simple_hearts.heart_container": "Heart Container",
+  "item_group.simple_hearts.simple_hearts_tab": "Simple Hearts",
+  "jei.simple_hearts.eternal_heart_info": "This is a rare find in underground abandoned shacks.",
+  "item.simple_hearts.rotten_heart_piece": "Rotten Heart Piece",
+  "jei.simple_hearts.rotten_heart_info": "These very foul smelling items can be obtained from\nzombies as a rare drop.",
+  "item.simple_hearts.eternal_heart": "Eternal Heart",
+  "item.simple_hearts.rotten_heart": "Rotten Heart",
+  "item.simple_hearts.heart_piece": "Heart Piece",
+  "item.simple_hearts.rotten_soup": "Rotten Soup"
 }

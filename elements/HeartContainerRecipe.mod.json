@@ -1,58 +1,48 @@
 {
-<<<<<<< HEAD
-  "_fv": 34,
-=======
-  "_fv": 25,
->>>>>>> branch '1.18.2' of https://github.com/Yr1t/simplehearts.git
+  "_fv": 57,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
-    "xpReward": 0.0,
-    "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": "Items.GOLD_INGOT"
       },
       {
-<<<<<<< HEAD
-        "value": "Blocks.GOLD_BLOCK"
-=======
-        "value": "Items.GOLD_INGOT"
->>>>>>> branch '1.18.2' of https://github.com/Yr1t/simplehearts.git
+        "value": "Items.NETHERITE_INGOT"
       },
       {
         "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "CUSTOM:Heartpiece"
+        "value": "CUSTOM:HeartPiece"
       },
       {
-        "value": "CUSTOM:Heartpiece"
+        "value": "CUSTOM:HeartPiece"
       },
       {
-        "value": "CUSTOM:Heartpiece"
+        "value": "CUSTOM:HeartPiece"
       },
       {
         "value": "Items.GOLD_INGOT"
       },
       {
-<<<<<<< HEAD
-        "value": "Blocks.GOLD_BLOCK"
-=======
-        "value": "Items.GOLD_INGOT"
->>>>>>> branch '1.18.2' of https://github.com/Yr1t/simplehearts.git
+        "value": "Items.NETHERITE_INGOT"
       },
       {
         "value": "Items.GOLD_INGOT"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Heartcontainer"
+      "value": "CUSTOM:HeartContainer"
     },
-    "name": "heart_container_recipe",
+    "name": "heart_container",
     "namespace": "mod"
   }
 }
